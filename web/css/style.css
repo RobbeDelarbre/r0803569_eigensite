@@ -1,0 +1,314 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav {
+    background: #028090;
+    box-shadow: 0px 5px 26px 1px rgba(0, 0, 0, 0.59);
+}
+
+nav figure {
+    text-align: center;
+    margin-top: 0;
+    padding: 0.5em;
+}
+
+nav figure img {
+    width: 170px;
+}
+
+nav ul li {
+    display: block;
+    background: #114B5F;
+    text-align: center;
+    font-size: 1.3em;
+}
+
+nav ul {
+    padding-left: 0;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 20px;
+}
+
+nav li:hover {
+    background: #456990;
+    color: black;
+    transition: 0.3s;
+}
+
+main {
+    padding: 1em;
+    min-height: 80vh;
+}
+
+main h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 2.6em;
+}
+
+h3 {
+    font-weight: bolder;
+    margin-bottom: 0;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 32px;
+}
+
+#indexhtml main aside figure {
+    margin: auto;
+    width: 95%;
+}
+
+#indexhtml main aside figure img {
+    width: 100%;
+    margin: auto;
+    border-radius: 10px;
+}
+
+#indexhtml main aside p {
+    text-align: center;
+}
+
+#fotogalerijhtml main section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#fotogalerijhtml main section figure {
+    width: 100%;
+    padding: 5px;
+    margin: 0;
+    border-radius: 25px;
+}
+
+#fotogalerijhtml main section figure img {
+    width: 100%;
+    border-radius: 25px;
+    box-shadow: 7px 11px 77px -15px rgba(0, 0, 0, 0.75);
+}
+
+#prijzenEnProductenHtml main section {
+    padding-bottom: 25px;
+    padding-top: 25px;
+}
+
+#prijzenEnProductenHtml main table {
+    width: 98%;
+    margin: auto;
+}
+
+#prijzenEnProductenHtml main section table tr th {
+    text-align: left;
+    font-size: 1.1em;
+}
+
+#prijzenEnProductenHtml main section table tr th:nth-child(2) {
+    text-align: right;
+}
+
+#prijzenEnProductenHtml main section table tr td:last-child {
+    width: 10%;
+    text-align: right;
+}
+
+#contacthtml main article iframe {
+    width: 100%;
+    height: 300px;
+}
+
+form {
+    background-color: #F2F2F2;
+    padding: 3px 10px 15px;
+    border-radius: 7px;
+}
+
+form p label {
+    display: block;
+}
+
+form p:nth-child(4) {
+    margin-bottom: 0;
+}
+
+form p div {
+    display: inline-block;
+}
+
+input[type=text], input[type=email], input[type=date], input[type=time] {
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+form p label:nth-child(4) {
+    display: inline;
+}
+
+input[type=submit] {
+    background-color: #114B5F;
+    color: white;
+    padding: 14px 20px;
+    width: 100%;
+}
+
+input[type=submit]:hover {
+    background-color: #456990;
+    transition: 0.3s;
+}
+
+footer {
+    background-color: #E4FDE1;
+    padding: 10px;
+    color: #456990;
+    position: relative;
+    min-height: 100px;
+    text-align: center;
+}
+
+footer div table {
+    margin: auto;
+}
+
+footer>address {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: black;
+    font-size: 12px;
+}
+
+footer address p {
+    margin: 0;
+}
+
+footer a {
+    color: #456990;
+}
+
+@media only screen and (min-width: 585px) {
+    nav ul {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    nav ul li {
+        flex-grow: 1;
+    }
+    #indexhtml main aside figure {
+        width: 49%;
+        display: inline-block;
+    }
+    #prijzenEnProductenHtml main section table {
+        width: 90%;
+    }
+    #fotogalerijhtml main section figure {
+        width: 48%;
+    }
+    form {
+        width: 70%;
+    }
+    #contacthtml main article iframe {
+        height: 400px;
+    }
+    #contacthtml table tr td:first-child {
+        border-right: 30px solid rgba(255, 255, 255, 0);
+    }
+    footer {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+    }
+    footer div:first-child {
+        grid-area: 1 / col1-start / last-line / 2;
+    }
+}
+
+@media only screen and (min-width: 850px) {
+    nav {
+        display: flex;
+        justify-content: space-between;
+    }
+    nav figure {
+        margin-bottom: 0;
+    }
+    nav ul {
+        justify-content: flex-end;
+        align-content: flex-end;
+        margin-bottom: 0;
+    }
+    nav ul li {
+        flex-grow: 0;
+        align-self: flex-end;
+    }
+    #indexhtml main h1, #contacthtml main h1 {
+        grid-column-start: 1;
+        grid-column-end: end;
+    }
+    #indexhtml main {
+        display: grid;
+        grid-template-columns: 60% 40%;
+        grid-template-rows: 100px 100%;
+    }
+    #indexhtml main article {
+        margin-right: 5%;
+    }
+    #fotogalerijhtml main section figure {
+        width: 32%;
+    }
+    #prijzenEnProductenHtml main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    #prijzenEnProductenHtml main section {
+        width: 47%;
+    }
+    #contacthtml main {
+        display: grid;
+        grid-template-rows: 100px 1fr 580px;
+        grid-template-columns: 65% 35%;
+    }
+    #contacthtml main article:first-child {
+        margin-right: 5%;
+    }
+    #contacthtml main article:nth-child(2) {
+        margin-right: 5%;
+    }
+    #contacthtml main article iframe {
+        height: 500px;
+    }
+    form {
+        width: 90%;
+    }
+    #contacthtml main article:last-child {
+        grid-column-start: 1;
+        grid-column-end: end;
+    }
+    footer {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    footer div {
+        margin: auto;
+    }
+}
+
+@media only screen and (min-width: 1300px) {
+    body main {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
